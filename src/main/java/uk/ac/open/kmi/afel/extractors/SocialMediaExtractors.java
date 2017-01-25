@@ -140,13 +140,14 @@ public class SocialMediaExtractors {
 //			out = new FileOutputStream(filename);
 //			RDFDataMgr.write(out, m, RDFFormat.NTRIPLES);
 //			out.close();
-//			log.info("DONE - {} statements written.", m.size());
 //		} catch (FileNotFoundException e) {
 //			log.error("Failed to create or reuse file " + filename, e);
 //		} catch (IOException e) {
 //			log.error("Failed to write to file " + filename, e);
 //		}
 
+		log.debug("DONE - {} statements written.", m.size());
+		
 	}
 
 }

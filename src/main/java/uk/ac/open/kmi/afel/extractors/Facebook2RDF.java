@@ -71,7 +71,7 @@ public class Facebook2RDF {
 		User iam;
 		try {
 			iam = facebook.getMe();
-			log.info("Extracting data for Facebook user named \"{}\" (id={})",
+			log.debug("Extracting data for Facebook user named \"{}\" (id={})",
 					iam.getName(), iam.getId());
 		} catch (FacebookException e) {
 			log.error("Could not even retrieve who I am! Cannot go on.");
@@ -135,7 +135,7 @@ public class Facebook2RDF {
 		try {
 			// Not much to do as it requires FB approval
 			for (Group item : facebook.getGroups()) {
-				log.info(" * in group '{}'", item.getName());
+				log.debug(" * in group '{}'", item.getName());
 			}
 		} catch (FacebookException e) {
 			log.error("Could not get book list. Facebook4J reported:", e);
