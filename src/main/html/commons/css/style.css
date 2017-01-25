@@ -1,0 +1,22 @@
+body { font-size:1.5rem }
+h1 { font-size:24px; margin-bottom:30px }
+
+.fb-signout { float:right; font-size:.8em }
+.formfield { margin:10px 8%; width:85% }
+.message { background:#eee; border-radius:5px; margin:15px auto; padding: 15px 20px }
+.signin-button { background-color:#3b5998; border:1px solid #3b5998; border-radius:4px; box-shadow:1px 1px #333; display:table; margin:0 auto; text-decoration:none; padding:5px 10px }  
+.signin-button, .signin-button:hover { color:#fff; cursor:pointer }
+.signin-facebook-text { font-size:12px; font-weight:bold; margin-left:0 }
+
+#error { visibility:hidden; margin-bottom:30px; width:80%; margin-left:10%; padding:15px 20px 15px 20px; background:#eee; border-radius:5px; color:#d34836 }  
+#fb-signedas { background-color:#3b5998; border:1px solid #66d; color:#fff; font-size:0.85em; padding:5px }
+#fb-signedas a { color:#fff }
+#fb-signedas img { height:32px; margin: 0 5px; vertical-align:middle }
+#fb-signedas span {  vertical-align:middle }
+#form { background:#126567; border-radius:12px; margin:15px auto; max-width:400px; padding-top:15px; padding-bottom:10px }
+#gobutton { width:80%; cursor:pointer; margin-bottom:10px; margin-left:10%; margin-right:10%; text-align:center; background:#d34836; padding-left:10px; padding-right:10px; padding-top:5px; padding-bottom:5px; font-weight:bold; border-radius:5px; color:white; text-decoration:none }
+#gobutton:disabled { color:#999; cursor:not-allowed }
+#main { margin:5px auto; max-width:800px }
+#main .content { margin-left:3%; margin-right:3% }
+#twitter { margin-bottom:10px; width:100% }
+#username, #password { width:100% }
