@@ -36,9 +36,9 @@ public class SocialMediaExtractors {
 
 		public Cli(String[] args) {
 			this.args = args;
-			options.addOption("i", "appid", true, "OAuth AppId.");
-			options.addOption("s", "appsecret", true, "OAuth AppSecret.");
-			options.addOption("T", "token", true, "OAuth access token.");
+			options.addOption("i", "appid", true, "OAuth AppId (required).");
+			options.addOption("s", "appsecret", true, "OAuth AppSecret (required).");
+			options.addOption("T", "token", true, "OAuth access token (required).");
 			options.addOption("S", "secret", true,
 					"OAuth access secret (not required for Facebook Apps?).");
 			options.addOption("u", "username", true,
@@ -133,16 +133,19 @@ public class SocialMediaExtractors {
 		String filename = (afeluser == null ? "anonymous" : afeluser)
 				+ "_facebook" + ".nt";
 		OutputStream out;
-		try {
-			out = new FileOutputStream(filename);
-			RDFDataMgr.write(out, m, RDFFormat.NTRIPLES);
-			out.close();
-			log.info("DONE - {} statements written.", m.size());
-		} catch (FileNotFoundException e) {
-			log.error("Failed to create or reuse file " + filename, e);
-		} catch (IOException e) {
-			log.error("Failed to write to file " + filename, e);
-		}
+		out = System.out;
+		RDFDataMgr.write(out, m, RDFFormat.NTRIPLES);
+		
+//		try {
+//			out = new FileOutputStream(filename);
+//			RDFDataMgr.write(out, m, RDFFormat.NTRIPLES);
+//			out.close();
+//			log.info("DONE - {} statements written.", m.size());
+//		} catch (FileNotFoundException e) {
+//			log.error("Failed to create or reuse file " + filename, e);
+//		} catch (IOException e) {
+//			log.error("Failed to write to file " + filename, e);
+//		}
 
 	}
 
